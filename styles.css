@@ -1,0 +1,106 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+* *::before *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    
+    font-family: "Montserrat", sans-serif;
+    background-color: rgba(11, 117, 38, 0.071);
+}
+
+.wrapper {
+    margin: 1rem;
+    padding: 1rem; 
+}
+
+.card {
+    margin: 0 auto;
+    width: 80%;
+    max-width: 600px;
+    border: 2px solid black;
+    border-radius: .5rem;
+    padding: 1rem;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    background-color: rgba(11, 117, 37, 0.244);
+    overflow: hidden;
+}
+
+form {
+display: flex;
+gap: 1rem;
+align-items: center;
+padding-bottom: 1rem;
+
+
+}
+.form-input {
+    flex: 1;
+    font-size: 1rem;
+    padding: .5em;  
+    border-radius: .5em;
+    border: .5px solid grey;
+    outline: none;
+}
+.submit-btn {
+   
+    background-color: white;
+    font-size: 1rem;
+    border: none;
+    padding: .5em;
+    border: .5px solid grey;
+   
+    border-radius:.5em;
+   
+    &:hover, &:focus-visible       {
+        background-color: rgba(11, 117, 37, 0.902);
+        color: white;
+    }
+}
+
+
+.tasks {
+   
+    list-style: none;
+    width: 80%;
+    padding: 0;
+
+}
+
+li {
+    display: grid;
+   grid-template-columns: 1fr auto auto;
+   align-items: center;
+    width: 100%;
+    padding:.5em;
+    margin-bottom: .5em;
+    border-radius: .5em;
+    background-color:rgba(11, 117, 37, 0.902); 
+    color: white;
+    
+    /* justify-content: center;
+    align-items: center; */
+}
+
+#remove, #checkbox {
+    font-size: 1rem;
+   padding-left: 1rem;
+    &:hover {
+         cursor: pointer;
+       color:rgba(4, 4, 4, 0.902); 
+    }
+}
+.strike-through {
+    text-decoration: line-through;
+    background-color: rgba(11, 117, 38, 0.112); 
+    &:hover {
+        background-color:rgba(11, 117, 37, 0.902); 
+    }
+}
+
+
+
+
+
