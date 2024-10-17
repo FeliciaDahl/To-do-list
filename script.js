@@ -2,7 +2,7 @@ const input = document.querySelector("#form-input");
 const submit = document.querySelector("#submit-btn");
 const form = document.querySelector("#todo-form");
 const tasksDiv = document.querySelector("#task-list")
-let taskArray = [];
+const taskArray = [];
 
 form.addEventListener('submit', function(e) {
     e.preventDefault();
@@ -11,8 +11,12 @@ form.addEventListener('submit', function(e) {
   
     if(inputValue === '') return;
 
-    taskArray.push(inputValue);
- console.log(taskArray);
+    const newTask = { task: inputValue, completed: false };
+    taskArray.push(newTask);
+
+
+   console.log(taskArray);
+
     const taskList = document.querySelector('#tasks');
     const li = document.createElement('li');
 
@@ -27,17 +31,16 @@ form.addEventListener('submit', function(e) {
     removeIcon.className = "fa-solid fa-xmark";
     
  removeIcon.addEventListener( 'click', function() {
-    const i = taskArray.indexOf(inputValue)
-    if(i > -1) {
-    taskArray.splice(i, 1)
+   const taskIndex = taskArray.findIndex(task => task.task === inputValue);
+   if (taskIndex > -1) {
+   taskArray.splice(taskIndex, 1);
     taskList.removeChild(li);
 }
  })
 
  checkBox.addEventListener( 'click', function() {
-  
     li.classList.toggle('strike-through');
-
+    newTask.completed = !newTask.completed;
  })
 
     li.appendChild(checkBox);

@@ -97,6 +97,7 @@ li {
     background-color: rgba(11, 117, 38, 0.112); 
     &:hover {
         background-color:rgba(11, 117, 37, 0.902); 
+        
     }
 }
 
